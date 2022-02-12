@@ -1,0 +1,55 @@
+.signin-signup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  .background{
+    background: url("../img/v748-toon-111.jpg");
+    object-fit:fill;
+  }
+  .app-title {
+    grid-area: 1/1/1/1;
+    text-align: center;
+    place-items: center;
+    justify-items: center;
+    color:rgb(65, 109, 192);
+    font-size: 25px;
+  }
+  .logo-icon{
+    font-size: 75px;
+    
+  }
+  .signin-signup-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    place-items: center;
+    grid-area: 1/2/1/2;
+    height: auto;
+    margin: 0 auto;
+    width: 370px;
+    gap: 4px;
+    padding: 40px 30px;
+    background:rgba(203, 235, 230, 0.5);
+    box-shadow: 9px 10px 14px -1px rgba(81, 97, 104, 0.849);
+    backdrop-filter: blur(6.5px);
+    border-radius: 10px;
+    border: 2px solid rgba(179, 168, 123, 0.89);
+  }
+  
+  .h2{
+    color: rgb(238, 218, 34);
+    font-size: 60px;
+  }
+  .input{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+  }
+  .background {
+    background-color:wheat ;
+  }
