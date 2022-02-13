@@ -28,11 +28,10 @@ function ProductDetail() {
 
   const placeOrder = () => {
     const email = localStorage.getItem("email") || null 
-    console.log(email)
     if (email) {
       fetch(`${API_URL}/order/${id}`, {
         method: "POST",
-        body: JSON.stringify(),
+        body: JSON.stringify({...product,email: window.localStorage.getItem("email")}),
         headers: { "Content-Type": "application/json" },
       }).then((response) => {
         if (response.status === 200) {
@@ -41,7 +40,7 @@ function ProductDetail() {
             status: "success",
           });
         }else{
-          setMsg({ Message: "Error Occured ", status: "error" });
+          setMsg({ Message: "Order Failed ", status: "error" });
         }
       });
     } else {
@@ -51,7 +50,7 @@ function ProductDetail() {
   return (
     <div className="product-details">
       {
-        Msg && (<Stack sx={{ width: '100%' }} spacing={2}>
+        Msg && (<Stack sx={{ width: '100%' }}  spacing={2}>
         <Alert severity={Msg.status}>{Msg.Message}</Alert>
       </Stack>)
       }

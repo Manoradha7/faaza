@@ -13,7 +13,8 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 function Header() {
   function Logout(){
-    localStorage.removeItem("email")
+    localStorage.removeItem("email");
+    localStorage.removeItem("token");
   }
   const history = useHistory();  
   return (
